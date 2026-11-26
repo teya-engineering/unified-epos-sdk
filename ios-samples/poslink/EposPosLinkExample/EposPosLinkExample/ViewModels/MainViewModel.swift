@@ -77,4 +77,8 @@ final class MainViewModel {
         TeyaService.shared.clearDeviceLink()
         TeyaService.shared.setUp()
     }
+
+    func linkTerminal() {
+        TeyaService.shared.linkTerminal()
+    }
 }

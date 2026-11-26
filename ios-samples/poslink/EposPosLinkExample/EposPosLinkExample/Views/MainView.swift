@@ -29,7 +29,8 @@ struct MainView: View {
             .lemonadeTopBar(label: "ePOS Sample Poslink") {
                 TopBar(
                     onClearUserAuth: { viewModel.clearUserAuth() },
-                    onClearDeviceLink: { viewModel.clearDeviceLink() }
+                    onClearDeviceLink: { viewModel.clearDeviceLink() },
+                    onLinkTerminal: { viewModel.linkTerminal() }
                 )
             }
             .toolbar {

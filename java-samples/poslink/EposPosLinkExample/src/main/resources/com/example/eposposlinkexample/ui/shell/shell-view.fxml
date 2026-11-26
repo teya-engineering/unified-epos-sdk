@@ -28,6 +28,7 @@
                 <items>
                     <MenuItem text="Clear User Auth" onAction="#onClearUserAuth"/>
                     <MenuItem text="Clear Device Link" onAction="#onClearDeviceLink"/>
+                    <MenuItem text="Link Terminal" onAction="#onLinkTerminal"/>
                 </items>
             </MenuButton>
         </VBox>

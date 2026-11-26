@@ -84,4 +84,9 @@ public class ShellController {
         sdk.clearDeviceLink();
         sdk.setup();
     }
+
+    @FXML
+    private void onLinkTerminal() {
+        sdk.linkTerminal();
+    }
 }

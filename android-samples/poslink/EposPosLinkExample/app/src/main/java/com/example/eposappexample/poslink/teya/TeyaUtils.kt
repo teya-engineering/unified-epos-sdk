@@ -77,6 +77,13 @@ object TeyaUtils {
         teyaPosLinkSDK.clearDeviceLink()
     }
 
+    fun linkTerminal() {
+        teyaPosLinkSDK.linkTerminal(
+            onSuccess = { Log.d("SDK", "Terminal linked: $it") },
+            onFailure = { Log.e("SDK", "Failed to link terminal: $it") }
+        )
+    }
+
     // ---- Sale ----
 
     fun makePayment(amount: Int, tip: Int?) {

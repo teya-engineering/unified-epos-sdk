@@ -54,7 +54,8 @@ fun SaleScreen(
         topBar = {
             SaleTopBar(
                 onClearUserAuth = { viewModel.clearUserAuth() },
-                onClearDeviceLink = { viewModel.clearDeviceLink() }
+                onClearDeviceLink = { viewModel.clearDeviceLink() },
+                onLinkTerminal = { viewModel.linkTerminal() }
             )
         },
         bottomBar = {
@@ -86,7 +87,8 @@ fun SaleScreen(
 @Composable
 private fun SaleTopBar(
     onClearUserAuth: () -> Unit,
-    onClearDeviceLink: () -> Unit
+    onClearDeviceLink: () -> Unit,
+    onLinkTerminal: () -> Unit
 ) {
     var showMenu by remember { mutableStateOf(false) }
 
@@ -118,6 +120,13 @@ private fun SaleTopBar(
                     onClick = {
                         showMenu = false
                         onClearDeviceLink()
+                    }
+                )
+                DropdownMenuItem(
+                    text = { LemonadeUi.Text("Link Terminal") },
+                    onClick = {
+                        showMenu = false
+                        onLinkTerminal()
                     }
                 )
             }

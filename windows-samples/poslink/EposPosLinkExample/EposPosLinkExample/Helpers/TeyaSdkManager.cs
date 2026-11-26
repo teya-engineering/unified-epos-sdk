@@ -85,6 +85,11 @@ namespace EposPosLinkExample.Helpers
             return await SendRequestAsync("clearDeviceLink");
         }
 
+        public async Task<JsonElement> LinkTerminal()
+        {
+            return await SendRequestAsync("linkTerminal");
+        }
+
         public async Task<MakePaymentStateChange> MakePayment(string id, int totalAmount, int? tipAmount)
         {
             var paymentDetails = new
