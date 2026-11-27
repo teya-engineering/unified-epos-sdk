@@ -77,4 +77,8 @@ class SaleViewModel : ViewModel() {
         TeyaUtils.clearDeviceLink()
         TeyaUtils.setUp()
     }
+
+    fun linkTerminal() {
+        TeyaUtils.linkTerminal()
+    }
 }

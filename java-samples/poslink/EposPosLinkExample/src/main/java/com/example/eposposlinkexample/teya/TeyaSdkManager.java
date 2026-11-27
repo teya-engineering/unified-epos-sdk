@@ -86,6 +86,19 @@ public final class TeyaSdkManager {
         ready.set(false);
     }
 
+    public void linkTerminal() {
+        teyaPosLinkSDK.linkTerminal(
+                null,
+                terminal -> {
+                    LOG.log(System.Logger.Level.INFO, "Terminal linked: " + terminal);
+                    return Unit.INSTANCE;
+                },
+                failure -> {
+                    LOG.log(System.Logger.Level.ERROR, "Failed to link terminal: " + failure);
+                    return Unit.INSTANCE;
+                });
+    }
+
     static final class LoggerImpl implements Logger {
 
         @Override

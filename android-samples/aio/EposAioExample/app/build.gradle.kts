@@ -44,7 +44,7 @@ android {
 }
 
 dependencies {
-    implementation("com.teya.epos:unified-sdk-all-in-one:1.9.0")
+    implementation("com.teya.epos:unified-sdk-all-in-one:1.10.0")
 
     implementation(libs.lemonade.ui)
     implementation(libs.androidx.core.ktx)

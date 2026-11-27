@@ -49,6 +49,7 @@
                     <MenuFlyout>
                         <MenuFlyoutItem Text="Clear User Auth" Command="{x:Bind ViewModel.ClearUserAuthCommand}"/>
                         <MenuFlyoutItem Text="Clear Device Link" Command="{x:Bind ViewModel.ClearDeviceLinkCommand}"/>
+                        <MenuFlyoutItem Text="Link Terminal" Command="{x:Bind ViewModel.LinkTerminalCommand}"/>
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>

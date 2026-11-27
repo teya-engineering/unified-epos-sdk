@@ -49,6 +49,18 @@ final class TeyaService {
     func clearDeviceLink() {
         teyaPosLinkSDK.clearDeviceLink()
     }
+
+    func linkTerminal() {
+        teyaPosLinkSDK.linkTerminal(
+            terminalId: nil,
+            onSuccess: { terminal in
+                print("Terminal linked: \(terminal)")
+            },
+            onFailure: { failure in
+                print("Failed to link terminal: \(failure)")
+            }
+        )
+    }
     
     func makePayment(totalMinorUnits: Int32, tipMinorUnits: Int32) {
         let paymentSubscription = teyaPosLinkSDK.transactionsApi.makePayment(

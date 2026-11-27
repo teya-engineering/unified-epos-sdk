@@ -54,4 +54,11 @@ public partial class ShellViewModel : ObservableObject
         await _teyaSdkManager.ClearDeviceLink();
         await _teyaSdkManager.Setup();
     }
+
+    [RelayCommand]
+    private async Task LinkTerminal()
+    {
+        var linkResponse = await _teyaSdkManager.LinkTerminal();
+        Debug.WriteLine($"{linkResponse}");
+    }
 }
